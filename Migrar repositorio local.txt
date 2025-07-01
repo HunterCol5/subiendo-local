@@ -1,0 +1,61 @@
+https://www.youtube.com/watch?v=9ZJ-K-zk_Go&t=5942s
+
+limpiar 
+clear
+
+git status
+git status -s
+git status --short
+
+mostar cimmits
+git log --oneline		(solo los de la rama)
+git log --oneline --all		(todos)
+
+mostar ramas
+git branch
+
+cd p:git
+##### iniciar git en el el directorio seleccionado #####
+git init
+
+git add Archivo.txt 
+git commit -m "Agregando Commit 1" -a
+
+#modificar Archivo.txt y crear Archivo2.txt
+
+git add Archivo.txt Archivo2.txt
+git commit -m "Agregando Commit 2" -a
+
+##### Comandos de GitHub para importar #####
+
+git remote add origin https://github.com/HunterCol5/subiendo-local.git
+
+# para ver se puede hacer
+git remote -v
+
+Ejemplo de salida:
+origin  https://github.com/HunterCol5/subiendo-local.git (fetch)
+origin  https://github.com/HunterCol5/subiendo-local.git (push)
+
+git branch -M main
+
+git push -u origin main
+
+Nota: Si sale un error se hace lo siguiente: 
+
+Opción 1: Traer los cambios remotos y luego hacer push
+Esto traerá los cambios del repositorio remoto y los aplicará antes de tus cambios locales (gracias a --rebase), evitando conflictos innecesarios.
+
+git pull origin main --rebase
+git push -u origin main
+
+Opción 2: Forzar el push (no recomendado)
+git push -u origin main --force
+
+
+
+
+
+
+
+
